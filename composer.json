@@ -46,6 +46,13 @@
             "pestphp/pest-plugin": true
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "tronet\\FrontappMailer\\FrontAppServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "dev",
     "prefer-stable": true
 }
