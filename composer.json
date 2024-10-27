@@ -20,7 +20,6 @@
         "illuminate/contracts": "^10.0||^11.0"
     },
     "require-dev": {
-        "laravel/pint": "^1.14",
         "nunomaduro/collision": "^8.1.1||^7.10.0",
         "pestphp/pest": "^2.34",
         "pestphp/pest-plugin-arch": "^2.7",
