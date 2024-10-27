@@ -93,7 +93,7 @@ use Illuminate\Support\Facades\Mail;
             ->to(['your_recipient']) 
             ->cc(['your_cc_recipient'])
             ->bcc(['your_bcc_recipient'])
-            ->send(new TestMail());
+            ->send(new MyMail());
 ```
 
 ## Where to get the API token
