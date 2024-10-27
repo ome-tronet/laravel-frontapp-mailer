@@ -26,7 +26,7 @@ You must publish the config file `frontapp-mailer.php` in order to specify all a
 ```
 This config will automatically be added as a new config key of `mail.mailers` by the package when booting.
 
-To add your senders you need the Front `channel_id` of the inbox. If it's a personal inbox you also need to provide the `author_id` of the teammate.
+To add your senders you need the Front `channel_id` of the shared inbox. If you want to send mails from a specific user you also need to provide the `author_id` of the teammate.
 
 ```php
 return [
@@ -109,12 +109,6 @@ Got to Front's API reference page to list the channels, teammates and tags. If y
 - https://dev.frontapp.com/reference/list-tags
 
 Extract the IDs of the channels ('cha_XXXXX'), authors ('tea_XXXXX') and tags ('tag_XXXXX') that you want to use in your application from the API responses.
-
-## Testing
-
-```bash
-composer test
-```
 
 ## Changelog
 
