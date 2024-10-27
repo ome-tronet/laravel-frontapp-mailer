@@ -13,7 +13,7 @@ class FrontappServiceProvider extends ServiceProvider
     public function boot(): void
     {
         $this->mergeConfigFrom(
-            __DIR__.'/../config/frontapp_mailer.php', 'mail.mailers'
+            __DIR__.'/../config/frontapp-mailer.php', 'mail.mailers'
         );
 
         Mail::extend('front', function (array $config = []) {
