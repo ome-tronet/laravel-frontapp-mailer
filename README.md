@@ -100,7 +100,7 @@ use Illuminate\Support\Facades\Mail;
 
 In the front app, go to Settings > Developers and click on the API tokens tab. There you can get an existing API token or create a new one.
 
-# Where do I find the IDs of channels, authors, and tags
+## Where do I find the IDs of channels, authors, and tags
 
 Got to Front's API reference page to list the channels, teammates and tags. If you provide your API token, the page will generate the API call ready to use as e.g. curl shell command:
 
