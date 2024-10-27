@@ -90,9 +90,9 @@ Now you can use the Front mailer everywhere you like to send this mailable to yo
 use Illuminate\Support\Facades\Mail;
 
         Mail::mailer('front')
-            ->to('your_recipient') // use array for multiple
-            ->cc('your_cc_recipient') // use array for multiple
-            ->bcc('your_bcc_recipient') // use array for multiple
+            ->to(['your_recipient']) 
+            ->cc(['your_cc_recipient'])
+            ->bcc(['your_bcc_recipient])
             ->send(new TestMail());
 ```
 
