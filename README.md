@@ -1,19 +1,11 @@
-# This is my package laravel-frontapp-mailer
+# Laravel Package for using Front as a mailer
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ome-tronet/laravel-frontapp-mailer.svg?style=flat-square)](https://packagist.org/packages/ome-tronet/laravel-frontapp-mailer)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/ome-tronet/laravel-frontapp-mailer/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/ome-tronet/laravel-frontapp-mailer/actions?query=workflow%3Arun-tests+branch%3Amain)
 [![GitHub Code Style Action Status](https://img.shields.io/github/actions/workflow/status/ome-tronet/laravel-frontapp-mailer/fix-php-code-style-issues.yml?branch=main&label=code%20style&style=flat-square)](https://github.com/ome-tronet/laravel-frontapp-mailer/actions?query=workflow%3A"Fix+PHP+code+style+issues"+branch%3Amain)
 [![Total Downloads](https://img.shields.io/packagist/dt/ome-tronet/laravel-frontapp-mailer.svg?style=flat-square)](https://packagist.org/packages/ome-tronet/laravel-frontapp-mailer)
 
-This is where your description should go. Limit it to a paragraph or two. Consider adding a small example.
-
-## Support us
-
-[<img src="https://github-ads.s3.eu-central-1.amazonaws.com/laravel-frontapp-mailer.jpg?t=1" width="419px" />](https://spatie.be/github-ad-click/laravel-frontapp-mailer)
-
-We invest a lot of resources into creating [best in class open source packages](https://spatie.be/open-source). You can support us by [buying one of our paid products](https://spatie.be/open-source/support-us).
-
-We highly appreciate you sending us a postcard from your hometown, mentioning which of our package(s) you are using. You'll find our address on [our contact page](https://spatie.be/about-us). We publish all received postcards on [our virtual postcard wall](https://spatie.be/open-source/postcards).
+This package registers a laravel mailer with which you can send your application's mails via Front API (https://front.com/). his can be useful if you are expecting a conversation with the recipient and want to follow it up in Front. You also have the option of tagging emails when they are sent in order to classify them in Front.
 
 ## Installation
 
@@ -22,31 +14,52 @@ You can install the package via composer:
 ```bash
 composer require ome-tronet/laravel-frontapp-mailer
 ```
+Add your Frontapp API token to your .env file.
 
-You can publish and run the migrations with:
-
-```bash
-php artisan vendor:publish --tag="laravel-frontapp-mailer-migrations"
-php artisan migrate
+```dotenv
+FRONTAPP_API_TOKEN="yourtoken"
 ```
 
-You can publish the config file with:
+You must publish the config file in order to specify all allowed senders.
 
 ```bash
-php artisan vendor:publish --tag="laravel-frontapp-mailer-config"
+ php artisan vendor:publish --provider="tronet\FrontappMailer\FrontappServiceProvider"
 ```
 
-This is the contents of the published config file:
+To specify your senders you need the Front channel_id of the inbox. If it's a personal inbox you also need to provide the author_id of the teammate.
 
 ```php
 return [
+    'transport' => 'front',
+    'api_base_url' => 'https://api2.frontapp.com',
+    'api_token' => env('FRONTAPP_API_TOKEN'),
+    'senders' => [
+
+        /*
+         * You must specify all desired senders.
+         *
+         * Specify shared inboxes as senders
+         * with their channel_id
+         *
+         */
+
+         'info@example.com' => [
+            'channel_id' => 'cha_XXXXX'
+         ]
+
+         /*
+         * Specify personal inboxes as senders
+         * additionally with their author_id
+         *
+         * 'name@example.com' => [
+         *      'channel_id' => 'cha_XXXXX',
+         *      'author_id' => 'tea_XXXXX'
+         * ]
+         *
+         */
+
+    ]
 ];
-```
-
-Optionally, you can publish the views using
-
-```bash
-php artisan vendor:publish --tag="laravel-frontapp-mailer-views"
 ```
 
 ## Usage

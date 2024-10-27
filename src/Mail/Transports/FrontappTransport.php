@@ -5,7 +5,10 @@ namespace tronet\FrontappMailer\Mail\Transports;
 use Symfony\Component\Mailer\Header\TagHeader;
 use Symfony\Component\Mailer\SentMessage;
 use Symfony\Component\Mailer\Transport\AbstractTransport;
+use Symfony\Component\Mime\Email;
+use Symfony\Component\Mime\Message;
 use Symfony\Component\Mime\MessageConverter;
+use Symfony\Component\Mime\RawMessage;
 use tronet\FrontappMailer\FrontappService;
 
 /**
@@ -24,6 +27,8 @@ class FrontappTransport extends AbstractTransport
 
     protected function doSend(SentMessage $message): void
     {
+        $originalMessage = $message->getOriginalMessage();
+
         $emailMessage = MessageConverter::toEmail($message->getOriginalMessage());
 
         $tags = [];
