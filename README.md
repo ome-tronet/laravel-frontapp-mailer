@@ -92,7 +92,7 @@ use Illuminate\Support\Facades\Mail;
         Mail::mailer('front')
             ->to(['your_recipient']) 
             ->cc(['your_cc_recipient'])
-            ->bcc(['your_bcc_recipient])
+            ->bcc(['your_bcc_recipient'])
             ->send(new TestMail());
 ```
 
