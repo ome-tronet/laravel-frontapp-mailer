@@ -1,6 +1,6 @@
 <?php
 
-namespace tronet\FrontappService\Mail\Transports;
+namespace tronet\FrontappMailer\Mail\Transports;
 
 use Symfony\Component\Mailer\Header\TagHeader;
 use Symfony\Component\Mailer\SentMessage;
