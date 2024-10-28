@@ -115,11 +115,6 @@ Extract the IDs of the channels ('cha_XXXXX'), authors ('tea_XXXXX') and tags ('
 
 Please see [CHANGELOG](CHANGELOG.md) for more information on what has changed recently.
 
-## Credits
-
-- [Oliver Merklinghaus](https://github.com/ome-tronet)
-- [All Contributors](../../contributors)
-
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
