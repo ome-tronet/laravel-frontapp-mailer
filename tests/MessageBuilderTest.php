@@ -2,7 +2,7 @@
 
 namespace tronet\FrontappService\Tests;
 
-use Illuminate\Foundation\Testing\TestCase;
+use Orchestra\Testbench\TestCase;
 use tronet\FrontappMailer\Builders\MessageBuilder;
 use tronet\FrontappMailer\Exceptions\InvalidMessageException;
 
