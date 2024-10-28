@@ -6,6 +6,11 @@
 
 This package registers a laravel mailer so you can send your application's mails via Front API (https://front.com/). This can be useful if you are expecting a conversation with the recipient and want to follow it up in Front. You also have the option of tagging emails when they are sent in order to classify them in Front.
 
+## Requires
+
+- PHP ^8.2
+- Laravel ^10.0||^11.0
+
 ## Installation
 
 You can install the package via composer:
@@ -47,7 +52,7 @@ return [
             'channel_id' => 'cha_XXXXX'
          ]
 
-         /*
+        /*
          * Specify teammates as senders
          * with their author_id.
          * You can use non-existing addresses.
