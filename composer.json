@@ -1,6 +1,6 @@
 {
     "name": "ome-tronet/laravel-frontapp-mailer",
-    "description": "This is my package laravel-frontapp-mailer",
+    "description": "Laravel mail driver for Front customer service platform",
     "keywords": [
         "Oliver Merklinghaus",
         "laravel",

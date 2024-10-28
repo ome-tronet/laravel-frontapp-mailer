@@ -24,7 +24,7 @@ You must publish the config file `frontapp-mailer.php` in order to specify all a
 ```bash
  php artisan vendor:publish --provider="tronet\FrontappMailer\FrontappServiceProvider"
 ```
-This config will automatically be added as a new config key of `mail.mailers` by the package when booting.
+Just FYI: This config will automatically be added as a new config key of `mail.mailers` by the package when booting.
 
 To add your senders you need the Front `channel_id` of the shared inbox. If you want to send mails from a specific user you also need to provide the `author_id` of the teammate.
 
@@ -39,7 +39,7 @@ return [
          * You must specify all desired senders.
          *
          * Specify shared inboxes as senders
-         * with their channel_id
+         * with their channel_id.
          *
          */
 
@@ -48,10 +48,11 @@ return [
          ]
 
          /*
-         * Specify personal inboxes as senders
-         * additionally with their author_id
+         * Specify teammates as senders
+         * with their author_id.
+         * You can use non-existing addresses.
          *
-         * 'name@example.com' => [
+         * 'teammate.info@example.com' => [
          *      'channel_id' => 'cha_XXXXX',
          *      'author_id' => 'tea_XXXXX'
          * ]
