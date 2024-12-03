@@ -1,4 +1,4 @@
-# Laravel Package for using Front as a mailer
+# Laravel Frontapp mailer
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/ome-tronet/laravel-frontapp-mailer.svg?style=flat-square)](https://packagist.org/packages/ome-tronet/laravel-frontapp-mailer)
 [![GitHub Tests Action Status](https://img.shields.io/github/actions/workflow/status/ome-tronet/laravel-frontapp-mailer/run-tests.yml?branch=main&label=tests&style=flat-square)](https://github.com/ome-tronet/laravel-frontapp-mailer/actions?query=workflow%3Arun-tests+branch%3Amain)
@@ -108,7 +108,7 @@ In the front app, go to Settings > Developers and click on the API tokens tab. T
 
 ## Where do I find the IDs of channels, authors, and tags
 
-Got to Front's API reference page to list the channels, teammates and tags. If you provide your API token, the page will generate the API call ready to use as e.g. curl shell command:
+Go to Front's API reference page to list the channels, teammates and tags. If you provide your API token, the page will generate the API call ready to use as e.g. curl shell command:
 
 - https://dev.frontapp.com/reference/list-channels
 - https://dev.frontapp.com/reference/list-teammates
