@@ -70,7 +70,7 @@ return [
 
 ## Usage
 
-Create your mailable as usual like `php artisan make:mail MyMail` and use one of the senders you added to the `frontapp-mailer.php` config file as address in the envelope. You may also add front tags by their `tag_id` to the conversation upfront.
+Create your mailable as usual with `php artisan make:mail MyMail` and use one of the senders you added to the `frontapp-mailer.php` config file as address in the envelope. You may also add front tags by their `tag_id` to the conversation upfront.
 
 ```php
 class MyMail extends Mailable
